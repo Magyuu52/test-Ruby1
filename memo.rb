@@ -25,7 +25,7 @@
     puts "完了したら、Ctrl + Dを押します"
     @memo_new_sentence = STDIN.read
     @new_content = @memo_new_sentence.chomp
-    CSV.open("#{@selected_title}.csv","w") do |csv|
+    CSV.open("#{@selected_title}.csv","a") do |csv|
     csv << ["#{@new_content}"]
    end
   end
